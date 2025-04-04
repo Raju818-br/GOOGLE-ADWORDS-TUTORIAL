@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google AdWords Tutorial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="light-mode">
+    <header class="navbar">
+        <h1>Google AdWords Tutorial</h1>
+    </header>
+    
+    <section class="container">
+        <h2>Step 2: Sign in to Google Ads</h2>
+        <p>After creating your Google Account, follow these steps to sign in to Google Ads:</p>
+        <ol>
+            <li>Go to <a href="https://ads.google.com/" target="_blank">Google Ads</a>.</li>
+            <li>Click on the "Sign In" button at the top right corner.</li>
+            <li>Enter your Google Account email and click "Next".</li>
+            <li>Enter your password and complete any security verification if required.</li>
+            <li>Once logged in, you will be directed to the Google Ads dashboard.</li>
+        </ol>
+        
+        <div class="tips">
+            <h3>Tips for a Smooth Sign-in:</h3>
+            <ul>
+                <li>Ensure your Google account is verified before signing in.</li>
+                <li>Use a strong password and enable two-factor authentication for better security.</li>
+                <li>If you forget your password, use the "Forgot password?" option to recover your account.</li>
+            </ul>
+        </div>
+        
+        <div class="progress-bar">
+            <span class="progress-step completed">1</span>
+            <span class="progress-step active">2</span>
+            <span class="progress-step">3</span>
+            <span class="progress-step">4</span>
+            <span class="progress-step">5</span>
+        </div>
+        
+        <div class="nav-buttons">
+            <a href="step1.html" class="btn prev-btn">Back</a>
+            <a href="step3.html" class="btn next-btn">Next</a>
+        </div>
+    </section>
+    
+    <script>
+        document.getElementById("darkModeToggle").addEventListener("click", function () {
+            document.body.classList.toggle("dark-mode");
+            if (document.body.classList.contains("dark-mode")) {
+                localStorage.setItem("theme", "dark");
+                this.textContent = "☀️";
+            } else {
+                localStorage.setItem("theme", "light");
+                this.textContent = "🌙";
+            }
+        });
+
+        // Load theme from localStorage
+        window.onload = function () {
+            if (localStorage.getItem("theme") === "dark") {
+                document.body.classList.add("dark-mode");
+                document.getElementById("darkModeToggle").textContent = "☀️";
+            }
+        };
+    </script>
+</body>
+</html>

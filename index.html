@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google AdWords Tutorial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <h1>Google AdWords Tutorial</h1>
+        <button id="darkModeToggle">🌙</button>
+    </header>
+    <section class="container">
+        <h2>Learn Google AdWords Step-by-Step</h2>
+        <p>Master Google Ads with our interactive guide.</p>
+        <a href="step1.html" class="btn start-btn">Start Tutorial</a>
+    </section>
+    <script>
+        document.getElementById("darkModeToggle").addEventListener("click", function () {
+            document.body.classList.toggle("dark-mode");
+            if (document.body.classList.contains("dark-mode")) {
+                localStorage.setItem("theme", "dark");
+                this.textContent = "☀️";
+            } else {
+                localStorage.setItem("theme", "light");
+                this.textContent = "🌙";
+            }
+        });
+
+        // Load theme from localStorage
+        window.onload = function () {
+            if (localStorage.getItem("theme") === "dark") {
+                document.body.classList.add("dark-mode");
+                document.getElementById("darkModeToggle").textContent = "☀️";
+            }
+        };
+    </script>
+</body>
+</html>
