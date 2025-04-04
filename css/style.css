@@ -1,0 +1,104 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Light Mode */
+body {
+    background: #f8f9fa;
+    color: #343a40;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+h1, h2 {
+    color: #281137;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+a.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 25px;
+    margin: 10px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.start-btn { background: #007bff; color: white; }
+.next-btn, .prev-btn { background: #28a745; color: white; }
+.finish-btn { background: #ffc107; color: black; }
+
+.start-btn:hover { background: #0056b3; }
+.next-btn:hover, .prev-btn:hover { background: #218838; }
+.finish-btn:hover { background: #e0a800; }
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #007bff;
+    padding: 15px 20px;
+    color: white;
+}
+
+.navbar button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background: #222;
+    color: white;
+}
+
+.dark-mode .container { background: #333; color: white; }
+.dark-mode .navbar { background: #0056b3; }
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+a:hover {
+    transform: scale(1.05);
+}
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
